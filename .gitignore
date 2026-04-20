@@ -6,32 +6,43 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Node
-node_modules/
+# Logs
+*.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Env
+# Node
+node_modules/
+
+# Env (çok kritik)
 .env
 .env.*
 
-# Electron build outputs
+# Electron Builder build outputs
 dist/
-out/
 release/
 build/
 
-# Electron cache
-.cache/
-electron-cache/
+# Electron Builder cache
 electron-builder-cache/
+electron-builder-snap/
+electron-builder/
+.cache/
 
-# Binary artifacts
+# Electron signing artifacts (sen zaten skip ediyorsun ama yine de ignore edilmeli)
+*.pfx
+*.pem
+*.key
+
+# Electron ASAR
 *.asar
+*.asar.unpacked
+
+# Platform binaries
 *.dll
 *.so
 *.dylib
 
-# Logs
-*.log
+# Temp
+*.tmp
