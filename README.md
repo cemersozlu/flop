@@ -1,18 +1,10 @@
-# FLAC Player
+# FLAC Player Flop!
 
-A native Windows 11 FLAC music player with album grid view and star ratings, built with Electron.
+A native Windows 11 FLAC music player, built with Electron with multiple AI tools. Flac player build with AI slop.. so it's Flop!
 
 ## Features
 
-- **Album Grid** — browse your library by album artwork extracted from file metadata
-- **Track List** — view all tracks in a flat list
-- **Album Detail** — click any album to see its tracklist with disc/track ordering
-- **Now Playing Bar** — persistent player with progress scrubbing, volume control
-- **Quality Display** — shows bit depth and sample rate (e.g. `24bit · 96kHz`)
-- **Search** — filter albums, artists, and tracks in real time
-- **Sort** — by album name, artist, or year
-- **Keyboard-friendly** transport controls
-- **Star Ratings** — rate tracks from 1-5 stars, saved directly to FLAC file metadata
+- **It runs!**
 
 ## Requirements
 
