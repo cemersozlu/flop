@@ -1,0 +1,56 @@
+@layer tokens {
+    :root {
+        color-scheme: light dark;
+
+        --app-bgcolor: light-dark(#d2d3d8, #1f1f1f);
+        --app-color: light-dark(black, #d2d3d8);
+
+        --accent-color: #daff02;
+
+        --scrollbar-thumb--bgcolor: color-mix(in srgb, var(--app-color), transparent 50%);
+        --scrollbar-thumb--bgcolor--hover: color-mix(in srgb, var(--app-color), transparent 10%);
+
+        --library-action__button--color:var(--accent-color);
+        --library-action__button--bgcolor: color-mix(in srgb, var(--app-color), transparent 50%);
+
+        --library-search__input--bgcolor: color-mix(in srgb, var(--app-color), transparent 25%);
+
+        --player__transport__play-button--bgcolor: black;
+        --player__transport__play-button--color: var(--accent-color);
+
+        --player__transport__button--color: var(--app-bgcolor);
+        --player__transport__button--bgcolor: color-mix(in srgb, var(--app-color), transparent 15%);
+
+        --player__progress--bgcolor: var(--accent-color);
+        --player__progress__fill--bgcolor: var(--app-bgcolor);
+
+        --album__selected__cover--bgcolor: transparent;
+
+        --track-table--color: var(--app-color);
+        --track-table__row--color--hover: var(--app-bgcolor);
+        --track-table__row--bgcolor--hover: color-mix(in srgb, var(--app-color), transparent 25%);
+
+        --track-table__selected--color: var(--app-bgcolor);
+        --track-table__selected--bgcolor: var(--app-color);
+
+        --track-table__now-playing--bgcolor: var(--accent-color);
+        --track-table__now-playing--color: light-dark(var(--app-color), var(--app-bgcolor));
+        --track-table__now-playing__star--color: var(--track-table__now-playing--color);
+
+        --track-info-badge--color: var(--track-table--color);
+        --track-info-badge--bgcolor: color-mix(in srgb, var(--app-color), transparent 75%);
+
+        --album-grid__now-playing--color: var(--accent-color);
+
+        --rating--color: var(--app-color);
+        --rating--color--hover: var(--accent-color);
+        --rating__filled--color: var(--accent-color);
+
+        --tree-header--bgcolor--hover: var(--app-color);
+        --tree-header--color--hover: var(--app-bgcolor);
+        --tree-header__active--bgcolor: var(--app-color);
+        --tree-header__active--color: var(--accent-color);
+
+        --close-btn--bgcolor: rgb(217, 0, 90);
+    }
+}

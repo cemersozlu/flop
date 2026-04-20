@@ -1,0 +1,15 @@
+html[data-theme="dark"] {
+    color-scheme: dark;
+    --library-search__input--bgcolor: black;
+    --library-search__input--color: white;
+    --tree-header__active--bgcolor: black;
+    --player__transport__button--bgcolor: black;
+    --player__transport__button--color: white;
+    --library-action__button--bgcolor: black;
+}
+html[data-theme="dark"][data-collection="flac"] {
+  --accent-color: #daff02;
+}
+html[data-theme="dark"][data-collection="mp3"] {
+  --accent-color: #ffd500;
+}

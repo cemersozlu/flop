@@ -1,0 +1,5 @@
+html[data-theme="orange"] {
+    --accent-color: orangered;
+    --album-grid--gap: 0.25rem;
+    --album-grid__now-playing--border-width: 0.5rem;
+}

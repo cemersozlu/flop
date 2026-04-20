@@ -1,0 +1,6 @@
+@layer tokens {
+    :root {
+        --typeface-primary: 'Onest', sans-serif;
+        --typeface-mono: 'DM Mono', monospace;
+    }
+}

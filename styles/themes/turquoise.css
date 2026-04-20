@@ -1,0 +1,7 @@
+html[data-theme="turquoise"] {
+    color-scheme: dark;
+    --accent-color: turquoise;
+    --library-action__button--bgcolor: transparent;
+    --player__transport__button--bgcolor: transparent;
+    --player__transport__button--color: var(--accent-color);
+}

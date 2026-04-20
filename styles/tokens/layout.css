@@ -1,0 +1,15 @@
+@layer tokens {
+    :root {
+        --browser-width: 21rem;
+        --grid-gap: 1rem;
+        --album-width: 30%;
+        --grid-padding: calc(var(--grid-gap) + (var(--album-width)));
+        --grid-width: calc(var(--grid-gap) + (var(--browser-width)));
+        --size-button-sm: 4.25rem;
+        --font-size-sm: 12px;
+        --border-radius: 0.25rem;
+        --cover-size: 9rem;
+        --album-grid__now-playing--border-width: 0.125rem;
+        --album-grid--gap: 0.25rem;
+    }
+}

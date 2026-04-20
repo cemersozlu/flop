@@ -1,0 +1,10 @@
+html[data-theme="light"] {
+    color-scheme: light;
+    --album-grid--gap: 0.25rem;
+}
+html[data-theme="light"][data-collection="flac"] {
+  --accent-color: #daff02;
+}
+html[data-theme="light"][data-collection="mp3"] {
+  --accent-color: #ffd500;
+}
