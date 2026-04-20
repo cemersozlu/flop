@@ -11,7 +11,7 @@
 #theme{
     position: absolute;
     top:50px;
-    right: 50px;
+    inset-inline-end: 50px;
     z-index: 999;
 }
 @font-face {
@@ -79,7 +79,7 @@ body{
     position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    inset-inline-end: 0;
     height: 2rem;
     -webkit-app-region: drag;
     z-index: 99999;
@@ -145,10 +145,10 @@ body{
         left: 0;
         top: 0;
         bottom: 0;
-        right: 0;
+        inset-inline-end: 0;
         z-index: 101;
         padding-left: var(--grid-width);
-        padding-right: var(--grid-padding);
+        padding-inline-end: var(--grid-padding);
         padding-block: 1rem;
     }
 }
@@ -345,7 +345,7 @@ body{
 .album {
     display: flex;
     flex-direction: column;
-    right: 0;
+    inset-inline-end: 0;
     top: 0;
     bottom: 0;
     z-index: 201;
@@ -468,12 +468,12 @@ body{
     }
     .track-table__col-track-no {
         width: 3.5rem;
-        text-align: right;
+        text-align: end;
         font-family: var(--typeface-mono);
     }
     .track-table__col-track-duration {
         width: 4rem;
-        text-align: right;
+        text-align: end;
         font-family: var(--typeface-mono);
     }
     .track-table__col-track-rating {
@@ -665,7 +665,7 @@ body{
 .star {
     color: var(--rating--color);
     cursor: pointer;
-    margin-right: 2px;
+    margin-inline-end: 2px;
     transition: color 0.15s, transform 0.1s;
 
     &:hover {
@@ -705,12 +705,11 @@ body{
             }
             &.now-playing {
                 position: relative;
-                // border-left: 2px solid var(--accent-color);
                 font-weight: 700;
                 &:before{
                     content: "\25B6";
                     position: absolute;
-                    margin-right: 0.25rem;
+                    margin-inline-end: 0.5rem;
                 }
             }
             .folder-name{
@@ -724,7 +723,7 @@ body{
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-right: 0.25rem;
+                margin-inline-end: 0.5rem;
                 opacity: 0.5;
                 transition: transform 0.2s;
                 &.expanded {
@@ -787,10 +786,9 @@ body{
 /* Theme Sidebar */
 .theme-sidebar {
     position: fixed;
-    // top: 3rem;
     top: -6rem;
     width: 18rem;
-    right: 2rem;
+    inset-inline-end: 2rem;
     background: color-mix(in srgb, var(--app-bgcolor), transparent 15%);
     backdrop-filter: blur(3px);
     opacity: 0;
