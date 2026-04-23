@@ -23,9 +23,18 @@ function fmt(s) {
   return Math.floor(s / 60) + ':' + String(Math.floor(s % 60)).padStart(2, '0');
 }
 
+function norm(s) {
+  return String(s || '')
+    .normalize('NFD') // Decompose characters like Ş to S + cedilla
+    .replace(/[\u0300-\u036f]/g, '') // Remove diacritics
+    .toLowerCase()
+    .replace(/ı/g, 'i')
+    .replace(/İ/g, 'i');
+}
+
 function albumKey(t) {
-  const a = (t.albumArtist || t.artist || 'Unknown Artist').trim().toLowerCase();
-  const b = (t.album || 'Unknown Album').trim().toLowerCase();
+  const a = norm(t.albumArtist || t.artist || 'Unknown Artist').trim();
+  const b = norm(t.album || 'Unknown Album').trim();
   return a + '___' + b;
 }
 
@@ -101,7 +110,7 @@ function sortedAlbums(map) {
 }
 
 function filteredAlbums() {
-  const q = state.searchQuery.toLowerCase();
+  const q = norm(state.searchQuery);
 
   let albums = state.albums;
   if (state.currentFolder) {
@@ -117,13 +126,13 @@ function filteredAlbums() {
   if (!q) return albums;
   const r = {};
   for (const [k, a] of Object.entries(albums)) {
-    if (a.name.toLowerCase().includes(q) || a.artist.toLowerCase().includes(q) || a.tracks.some(t => t.title.toLowerCase().includes(q))) r[k] = a;
+    if (norm(a.name).includes(q) || norm(a.artist).includes(q) || a.tracks.some(t => norm(t.title).includes(q))) r[k] = a;
   }
   return r;
 }
 
 function filteredTracks() {
-  const q = state.searchQuery.toLowerCase();
+  const q = norm(state.searchQuery);
   let tracks = state.tracks;
 
   if (state.currentFolder) {
@@ -131,7 +140,7 @@ function filteredTracks() {
   }
 
   if (!q) return tracks;
-  return tracks.filter(t => t.title.toLowerCase().includes(q) || t.artist.toLowerCase().includes(q) || t.album.toLowerCase().includes(q));
+  return tracks.filter(t => norm(t.title).includes(q) || norm(t.artist).includes(q) || norm(t.album).includes(q));
 }
 
 // ── View switching ─────────────────────────────────────────
